@@ -1,0 +1,332 @@
+﻿body .signup-wrap {
+  position: relative;
+  width: 100%;
+  padding: 50px 50px;
+  margin: 50px auto;
+  font-family: "Open Sans", sans-serif;
+}
+    
+body .signup-wrap p {
+  margin-bottom: 0;
+  position: relative;
+}
+body .signup-wrap p.username:before {
+  background: none;
+}
+body .signup-wrap p:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 27px;
+  height: 40px;
+  background: url(../../Images/register.png) no-repeat;
+  top: -20px;
+  right: 34.5%;
+}
+body .signup-wrap p:nth-child(even):before {
+  left: 30%;
+}
+
+body .signup-wrap input[type="search"], body .signup-wrap input[type="password"], body .signup-wrap input[type="email"] ,body .signup-wrap input[type="submit"] {
+  border-radius: 50px;
+  background: green;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+  padding: 18px 0;
+  text-align: center;
+}
+
+body .signup-wrap input[type="search"]:focus, body .signup-wrap input[type="password"]:focus, body .signup-wrap input[type="submit"]:focus , body .signup-wrap input[type="email"]:focus {
+  outline: none;
+}
+body .signup-wrap input[type="search"]::-webkit-input-placeholder, body .signup-wrap input[type="password"]::-webkit-input-placeholder,body .signup-wrap input[type="email"]::-webkit-input-placeholder ,body .signup-wrap input[type="submit"]::-webkit-input-placeholder {
+  color: #fff;
+}
+body .signup-wrap input[type="search"]:-moz-placeholder, body .signup-wrap input[type="password"]:-moz-placeholder, body .signup-wrap input[type="email"]:-moz-placeholder ,body .signup-wrap input[type="submit"]:-moz-placeholder {
+  color: #fff;
+}
+body .signup-wrap input[type="search"]::-moz-placeholder, body .signup-wrap input[type="password"]::-moz-placeholder, body .signup-wrap input[type="submit"]::-moz-placeholder , body .signup-wrap input[type="email"]::-moz-placeholder {
+  color: #fff;
+}
+body .signup-wrap input[type="search"]:-ms-input-placeholder, body .signup-wrap input[type="password"]:-ms-input-placeholder, body .signup-wrap input[type="email"]:-ms-input-placeholder  ,body .signup-wrap input[type="submit"]:-ms-input-placeholder {
+  color: #fff;
+}
+body .signup-wrap input[type="submit"] {
+  background: green;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.7s ease-in-out;
+}
+
+body .signup-wrap input[type="submit"]:focus {
+  outline: none;
+}
+body .signup-wrap input[type="submit"]:hover {
+  background: #006aea;
+}
+
+body .signup-wrap input[type="email"]:hover , body .signup-wrap input[type="search"]:hover ,body .signup-wrap input[type="password"]:hover {
+  background: brown;
+}
+
+body .signup-wrap input[type="email"] , body .signup-wrap input[type="search"] , body .signup-wrap input[type="password"]{
+  transition: all 0.7s ease-in-out;
+}
+
+input[type="number"],
+input[type="tel"],
+select {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 30px;
+}
+
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+  border-radius: 50px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+}
+
+.register-input {
+  display: block;
+  width: 100%;
+  height: 38px;
+  margin-top: 2px;
+  font-weight: 500;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+.register-input:focus {
+  background: green;
+  outline: 0;
+}
+
+.register-button {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #494d59;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: green;
+  border: 1px solid;
+  border-color: #d8d8d8 #d1d1d1 #c3c3c3;
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: -moz-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: -o-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: linear-gradient(to bottom, #fefefe, #eeeeee);
+  -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04);
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04);
+}
+.register-button:active {
+  border-radius: 50px;
+  background: green;
+  border-color: #c3c3c3 #d1d1d1 #d8d8d8;
+  background-image: -webkit-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: -o-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: linear-gradient(to bottom, #eeeeee, #fcfcfc);
+  -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
+}
+.register-button:focus {
+  outline: 0;
+}
+
+.register-switch {
+  height: 32px;
+  margin-bottom: 15px;
+  padding: 4px;
+  border-radius: 50px;
+  background: green;
+  -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), inset 1px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), inset 1px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.register-switch-input {
+  display: none;
+}
+
+.register-switch-label {
+  float: left;
+  width: 50%;
+  line-height: 32px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.register-switch-input:checked + .register-switch-label {
+  font-weight: 500;
+  color: #434248;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  background: white;
+  border-radius: 50px;
+  background-image: -webkit-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: -moz-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: -o-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: linear-gradient(to bottom, #fefefe, #eeeeee);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+.select:before {
+  content: '';
+  position: absolute;
+  background-color: #ffffff;
+  width: 14px;
+  height: 14px;
+  -webkit-transform: rotate(45deg);
+  top: 15px;
+  right: 15px;
+  border-radius: 50px;
+}
+.select:after {
+    border-radius: 50px;
+  content: '';
+  position: absolute;
+  background-color: green;
+  width: 14px;
+  height: 14px;
+  -webkit-transform: rotate(45deg);
+  top: 20px;
+  right: 15px;
+}
+.collapsed {
+  height: 40px;
+}
+.collapsed:before {
+  content: '';
+  position: absolute;
+  background-color: #ffffff;
+  width: 14px;
+  height: 14px;
+  -webkit-transform: rotate(45deg);
+  top: 10px;
+  right: 15px;
+  border-radius: 50px;
+}
+.collapsed:after {
+  content: '';
+  position: absolute;
+  background-color: green;
+  width: 14px;
+  height: 14px;
+  -webkit-transform: rotate(45deg);
+  top: 5px;
+  border-radius: 50px;
+  right: 15px;
+}
+.option,
+.shown {
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  cursor: pointer;
+  background-color: #34495E;
+  border-radius: 50px;
+}
+.shown {
+  background-color: green;
+  font-weight: 400;
+  border-radius: 50px;
+}
+.styled-select-container {
+  position: relative;
+  float: left;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 40px;
+  width: 300px;
+  background-color: green;
+  border-radius: 50px;
+}
+.styled-select-container:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  background-color: #ffffff;
+  width: 14px;
+  height: 14px;
+  -webkit-transform: rotate(45deg);
+  top: 10px;
+  right: 15px;
+}
+.styled-select-container:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  background-color: green;
+  width: 14px;
+  height: 14px;
+  -webkit-transform: rotate(45deg);
+  top: 5px;
+  right: 15px;
+}
+.styled-select {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  -webkit-appearance: none;
+  border: 0;
+  height: 40px;
+  width: 100%;
+  text-indent: 15px;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+}
+

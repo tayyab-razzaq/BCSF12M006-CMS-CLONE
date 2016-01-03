@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Student</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="~/Content/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="~/Content/layout.css" type="text/css" media="all">
+    <link rel="stylesheet" href="~/Content/style.css" type="text/css" media="all">
+
+    
+</head>
+
+
+<body id="page1">
+
+    <div class="body1">
+        <div class="body2">
+            <div class="body3">
+                <div class="main">
+                    <!-- header -->
+                    <header>
+                        <div class="wrapper">
+                            <h1><a href="/Home/Index" id="logo"></a></h1>
+                            <form id="search" method="post">
+                                <div>
+                                    <input type="submit" class="submit" value="">
+                                    <input class="input" type="text" value="Site Search" onblur="if(this.value=='') this.value='Site Search'" onfocus="if(this.value =='Site Search' ) this.value=''">
+                                </div>
+                            </form>
+                            <nav>
+                                <br />
+                                <ul id="menu">
+                                    <li><a href="/Home/Index">Home</a></li>
+                                    <li><a href="/Home/About">About</a></li>
+                                    <li><a href="/Home/Contact">Contact</a></li>
+                                    <li><a href="/Authenticate/Register">Register</a></li>
+                                    <li class="end"><a href="/Authenticate/Login">Login</a></li>
+                            </ul>
+                            </nav>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body1">
+        <div class="main">
+
+            <section id="content">
+                <div class="line1">
+                    <div class="line2 wrapper">
+                        <div class="wrapper">
+                            <article class="col1 ">
+                                <div class="pad">
+                                    <ul id="menu-col">
+                                        <li class="active"><a href="/Home/AddStudent" align="center">Add Student</a></li>
+                                        <li><a href="/Home/DeleteStudent" align="center">Delete Student</a></li>
+                                        <li><a href="/Home/UpdateStudent" align="center">Update Student Info</a></li>
+                                        <li><a href="/Home/ShowAllStudents" align="center">View All Students</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="col2 pad_left1">
+                                <div class="pad">
+                                    <form action="/Home/AddStudent" method="post">
+
+                                        <table>
+                                            <tr>
+                                                <td>Name </td>
+                                                <td>
+                                                    <input type="text" name="t1" /></td>
+                                            </tr>
+                                            <tr></tr>
+                                            <tr></tr>
+
+                                            <tr>
+                                                <td>RollNo</td>
+                                                <td>
+                                                    <input type="text" name="t2" /></td>
+                                            </tr>
+                                            <tr></tr>
+                                            <tr></tr>
+                                            <tr>
+                                                <td>CGPA</td>
+                                                <td>
+                                                    <input type="text" name="t3" /></td>
+                                            </tr>
+                                            <tr></tr>
+                                            <tr></tr>
+                                            <tr>
+                                                <td>Degree</td>
+                                                <td>
+                                                    <input type="text" name="t4" /></td>
+                                            </tr>
+                                            <tr></tr>
+                                            <tr></tr>
+                                            <tr>
+                                                <td>Gender</td>
+                                                <td>
+                                                    <input type="text" name="t5" /></td>
+                                            </tr>
+                                            <tr></tr>
+                                            <tr></tr>
+                                        </table>
+                                        <br />
+                                        <input type="submit" value="Add Student" />
+                                    </form>
+                                </div>
+                            </article>
+                            <article class="col3 pad_left1">
+                                <div class="pad">
+                                    <div class="wrapper">
+                                    </div>
+                                    <div class="wrapper">
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="body4">
+        <div class="main">
+            <section id="content2">
+                <div class="line2 wrapper">
+                    <div class="wrapper">
+                        <article class="col1">
+                            <h2>Intro and Purpose</h2>
+                            <div class="wrapper">
+                                <figure class="left marg_right1">
+                                    <img src="~/Images/page1_img2.jpg" alt="">
+                                </figure>
+                                <p>
+                                    It is a Portal developed for daily student attendance in Educational institutes.
+                                    The information is sorted by the operators, which will be provided by the teacher for a particular class.
+                                    This system will also help in evaluating attendance eligibility criteria of a student.
+                                </p>
+                            </div>
+                            <div class="pad">
+                                <p>
+                                    The purpose of developing attendance management system is to computerized the tradition way of taking attendance.
+                                    Another purpose for developing this portal is to generate the report automatically at the end of the session or in the between of the session
+                                </p>
+                            </div>
+                        </article>
+                        <article class="col3 pad_left1">
+                            <h2>Coming Soon</h2>
+                            <div class="pad">
+                                <div class="wrapper">
+                                    <span class="date"><span>12</span>jun</span>
+                                    <p>
+                                        <a href="#" class="link1">Sed ut perspiciatis</a><br>
+                                    </p>
+                                </div>
+                                <div class="wrapper">
+                                    <span class="date"><span>23</span>jun</span>
+                                    <p>
+                                        <a href="#" class="link1">Doperiam eaque ipsa </a>
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="wrapper buttons">
+                        <article class="col1">
+                            <a href="/Home/DownloadFile2" class="button">Read More</a>
+                        </article>
+                        <article class="col3 pad_left1">
+                            <a href="#" class="button">Read More</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- / content -->
+
+
+</body>
+</html>

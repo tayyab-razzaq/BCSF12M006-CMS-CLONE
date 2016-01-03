@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="~/Content/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="~/Content/layout.css" type="text/css" media="all">
+    <link rel="stylesheet" href="~/Content/style.css" type="text/css" media="all">
+
+    <style>
+        div.coluns {
+            width: auto;
+        }
+
+            div.coluns div {
+                width: 300px;
+                height: 100px;
+                float: left;
+                margin-right: 100px;
+            }
+
+        div.clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+
+<body id="page1">
+
+    <div class="body1">
+        <div class="body2">
+            <div class="body3">
+                <div class="main">
+                    <!-- header -->
+                    <header>
+                        <div class="wrapper">
+                            <h1><a href="/Home/Index" id="logo"></a></h1>
+                            <form id="search" method="post">
+                                <div>
+                                    <input type="submit" class="submit" value="">
+                                    <input class="input" type="text" value="Site Search" onblur="if(this.value=='') this.value='Site Search'" onfocus="if(this.value =='Site Search' ) this.value=''">
+                                </div>
+                            </form>
+                            <nav>
+                                <br />
+                                <ul id="menu">
+                                    <li id="active"><a href="/Home/Index">Home</a></li>
+                                    <li><a href="/Home/About">About</a></li>
+                                    <li><a href="/Home/Contact">Contact</a></li>
+                                    <li><a href="/Authenticate/Register">Register</a></li>
+                                    <li class="end"><a href="/Authenticate/Login">Login</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body4">
+        <div class="main">
+            <section id="content2">
+                <div class="line2 wrapper">
+                    <div class="wrapper">
+                        <article class="col1">
+                            <h2>Intro and Purpose</h2>
+                            <div class="wrapper">
+                                <figure class="left marg_right1">
+                                    <img src="~/Images/page1_img2.jpg" alt="">
+                                </figure>
+                                <p>
+                                    It is a Portal developed for daily student attendance in Educational institutes.
+                                    The information is sorted by the operators, which will be provided by the teacher for a particular class.
+                                    This system will also help in evaluating attendance eligibility criteria of a student.
+                                </p>
+                            </div>
+                            <div class="pad">
+                                <p>
+                                    The purpose of developing attendance management system is to computerized the tradition way of taking attendance.
+                                    Another purpose for developing this portal is to generate the report automatically at the end of the session or in the between of the session
+                                </p>
+                            </div>
+                        </article>
+                        
+                    </div>
+                    <div class="wrapper buttons">
+                        <article class="col1">
+                            <a href="/Home/DownloadFile2" class="button">Read More</a>
+                        </article>
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- / content -->
+
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="~/Content/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="~/Content/layout.css" type="text/css" media="all">
+    <link rel="stylesheet" href="~/Content/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="~/Content/Authen.css" type="text/css" media="all">
+
+    <style>
+        body .signup-wrap a.signup {
+  display: block;
+  background: url(../../Images/signup1.png) no-repeat;
+  width: 178px;
+  max-width: 100%;
+  height: 66px;
+  margin: 0 auto;
+  margin-bottom: 0;
+}
+
+    </style>
+
+    <script type="text/javascript">
+
+        function Mor() {
+            var x = "M";
+            var str = document.getElementById("roll").value;
+            if (str == "")
+                str = "          ";
+            var start = str.substring(0, 6);
+            var end = str.substring(7, 10);
+            str = start + x;
+            if (end != "   ")
+                str = str + end;
+            document.getElementById("roll").value = str;
+        }
+
+        function Aft() {
+            var x = "A";
+            var str = document.getElementById("roll").value;
+            if (str == "")
+                str = "          ";
+            var start = str.substring(0, 6);
+            var end = str.substring(7, 10);
+            str = start + x;
+            if (end != "   ")
+                str = str + end;
+            document.getElementById("roll").value = str;
+        }
+
+        function Degree() {
+            var x = document.getElementById("degri").value;
+            var str = document.getElementById("roll").value;
+            if (str == "")
+                str = "          ";
+            var end = str.substring(7, 10);
+            var start = str.substring(3, 7);
+            str = x + start;
+            if (end != "   ")
+                str = str + end;
+            document.getElementById("roll").value = str;
+        }
+
+        function Fall() {
+            var x = document.getElementById("fal").value;
+            var str = document.getElementById("roll").value;
+            if (str == "")
+                str = "          ";
+
+            var start = str.substring(0, 3);
+            var end = str.substring(7, 10);
+            str = start + x + str.substring(6, 7);
+            if (end != "   ")
+                str = str + end;
+
+            document.getElementById("roll").value = str;
+        }
+
+        function validate() {
+            if (document.Data.RollNo.value == "") {
+                alert("Please Enter your Roll No !");
+                document.Data.RollNo.focus();
+                return false;
+            }
+
+            else if (document.Data.Pass.value == "") {
+                alert("Please Enter your Password !");
+                document.Data.Pass.focus();
+                return false;
+            }
+            else if (document.Data.TName.value == "") {
+                alert("Please Enter your Complete Name !");
+                document.Data.TName.focus();
+                return false;
+            }
+
+            else if (document.Data.Emailid.value == "") {
+                alert("Please Enter your Email ID !");
+                document.Data.Emailid.focus();
+                return false;
+            }
+
+            else {
+                return true;
+            }
+        }
+    </script>
+</head>
+
+
+<body id="page1">
+
+    <div class="body1">
+        <div class="body2">
+            <div class="body3">
+                <div class="main">
+                    <!-- header -->
+                    <header>
+                        <div class="wrapper">
+                            <h1><a href="/Home/Index" id="logo"></a></h1>
+                            <form id="search" method="post">
+                                <div>
+                                    <input type="submit" class="submit" value="">
+                                    <input class="input" type="text" value="Site Search" onblur="if(this.value=='') this.value='Site Search'" onfocus="if(this.value =='Site Search' ) this.value=''">
+                                </div>
+                            </form>
+                            <nav>
+                                <br />
+                                <ul id="menu">
+                                    <li><a href="/Home/Index">Home</a></li>
+                                    <li><a href="/Home/About">About</a></li>
+                                    <li><a href="/Home/Contact">Contact</a></li>
+                                    <li id="active"><a href="/Authenticate/Register">Register</a></li>
+                                    <li class="end"><a href="/Authenticate/Login">Login</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body1">
+        <div class="main">
+
+            <!-- content -->
+            <section id="content">
+                <div class="signup-wrap">
+                    <form name="data" method="post" action="#">
+                        <a class="signup"></a>
+                        <table>
+                            <tr>
+                                <td width="200">
+                                    <label>Degree</label>
+                                </td>
+                                <td width="30"></td>
+                                <td width="200">
+                                    <label>Session</label>
+                                </td>
+                                <td width="30"></td>
+                                <td width="300">
+                                    <label>Section</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                    <div class="styled-select-container">
+                                        <select class="styled-select" id="degri" onchange="Degree()">
+                                            <option disabled selected class="option" value="">SELECT</option>
+                                            <optgroup label="Graduate" class="option">
+                                                <option class="option" value="GIS">GIS</option>
+                                                <option class="option" value="MCS">MPhil-CS</option>
+                                            </optgroup>
+                                            <optgroup label="UnderGraduate" class="option">
+                                                <option class="option" value="BCS">BS-CS</option>
+                                                <option class="option" value="BSE">BS-SE</option>
+                                                <option class="option" value="BIT">BS-IT</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td></td>
+                                
+                                <td>
+                                    <div class="styled-select-container">
+                                        <select class="styled-select" id="fal" onchange="Fall()">
+                                            <option disabled selected class="option">SELECT</option>
+                                            
+                                            <option class="option" value="F16">Fall-2016</option>
+                                            <option class="option" value="F15">Fall-2015</option>
+                                            <option class="option" value="F14">Fall-2014</option>
+                                            <option class="option" value="F13">Fall-2013</option>
+                                            <option class="option" value="F12">Fall-2012</option>
+                                            <option class="option" value="F11">Fall-2011</option>
+                                            <option class="option" value="F10">Fall-2010</option>
+                                            <option class="option" value="F09">Fall-2009</option>
+                                            <option class="option" value="F08">Fall-2008</option>
+                                            <option class="option" value="F07">Fall-2007</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="register-switch">
+                                        <input onclick="Mor()" type="radio" name="sex" value="M" id="sex_m" class="register-switch-input">
+                                        <label for="sex_m" class="register-switch-label"><strong> MORNING</strong> </label>
+                                        <input onclick="Aft()" type="radio" name="sex" value="A" id="sex_f" class="register-switch-input">
+                                        <label for="sex_f" class="register-switch-label"><strong>AFTERNOON</strong> </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <p class="username">
+                            <input id="roll" type="search" value="" name='RollNo' placeholder="Your Roll Number" />
+                        </p>
+                        <p>
+                            <input type="password" name='Pass' placeholder="Secure it with a fancy password" />
+                        </p>
+                        <p>
+                            <input type="search" name='TName' placeholder="Your Complete Name" />
+                        </p>
+                        <p>
+                            <input type="email" name='Emailid' placeholder="An email just in case" />
+                        </p>
+                        
+                        <p>
+                            <input type="submit" value="Hit it when you're ready"/>
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="body4">
+        <div class="main">
+            <section id="content2">
+                <div class="line2 wrapper">
+                    <div class="wrapper">
+                        <article class="col1">
+                            <h2>Intro and Purpose</h2>
+                            <div class="wrapper">
+                                <figure class="left marg_right1">
+                                    <img src="~/Images/page1_img2.jpg" alt="">
+                                </figure>
+                                <p>
+                                    It is a Portal developed for daily student attendance in Educational institutes.
+                                    The information is sorted by the operators, which will be provided by the teacher for a particular class.
+                                    This system will also help in evaluating attendance eligibility criteria of a student.
+                                </p>
+                            </div>
+                            <div class="pad">
+                                <p>
+                                    The purpose of developing attendance management system is to computerized the tradition way of taking attendance.
+                                    Another purpose for developing this portal is to generate the report automatically at the end of the session or in the between of the session
+                                </p>
+                            </div>
+                        </article>
+                        
+                    </div>
+                    <div class="wrapper buttons">
+                        <article class="col1">
+                            <a href="/Home/DownloadFile2" class="button">Read More</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- / content -->
+    <script>
+        var selectid;
+
+        $(document).on('click', '.select', function () {
+            selectid = $(this).index('.select');
+            var adjust = ($(this).hasClass('collapsed')) ? 1 : 0;
+
+            console.log((($(this).children('.option').length) * $(this).children('.option').height()) * (adjust) + 40 + 'px');
+
+            $(this).animate({
+                'height': (($(this).children('.option').length) * $(this).children('.option').height()) * (adjust) + 40 + 'px'
+            }, 100);
+            $(this).toggleClass('collapsed');
+        });
+
+        $(document).on('click', '.option', function () {
+            var val = $(this).text();
+            $(this).parent().find('.shown').text(val);
+            selectid = -1;
+        });
+    </script>
+</body>
+</html>
